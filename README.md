@@ -1,4 +1,4 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 + Typescript + Vite + TailwindCSS 3
 
 
 ### How to recreate vue3 app
