@@ -6,5 +6,9 @@
 yarn create vite <project-name>
 select vue
 select vue-ts
+
+or use
+yarn create vite <project-name> --template vue
+
 ```
 
