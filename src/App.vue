@@ -1,20 +1,30 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">LOGO</router-link>
-      <router-link to="/" class="ml-6">Home</router-link>
-      <router-link to="/product" class="ml-6">Product</router-link>
-    </nav>
-
-    <div class="w-full">
-      <router-view />
-    </div>
-  </div>
+  <component :is="layout" />
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
-  name: "App",
-});
+<script>
+import AuthLayout from "@/components/layouts/AuthLayout.vue";
+import DashLayout from "@/components/layouts/DashLayout.vue";
+
+export default {
+  components: {
+    AuthLayout,
+    DashLayout,
+  },
+  data() {
+    return {
+      layout: null,
+    };
+  },
+  watch: {
+    $route(to) {
+      // set layout by route meta
+      if (to.meta.layout !== undefined) {
+        this.layout = to.meta.layout;
+      } else {
+        this.layout = "DashLayout"; // this is default layout if route meta is not set
+      }
+    },
+  },
+};
 </script>
