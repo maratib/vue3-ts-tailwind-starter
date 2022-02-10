@@ -1,6 +1,6 @@
 {
   "name": "vite-app",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
